@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">EADEP</string>
-    <string name="hint_email">Email ex.: email@example.com</string>
+    <string name="hint_email">Email</string>
     <string name="hint_password">Senha</string>
     <string name="title_description">EADEP</string>
     <string name="login_btn">Entrar</string>
@@ -15,4 +15,5 @@
     <string name="hint_year">Ano</string>
     <string name="hint_phone">Telefone</string>
     <string name="register_button">Cadastrar</string>
+    <string name="register_act_title">Cadastro de alunos</string>
 </resources>
