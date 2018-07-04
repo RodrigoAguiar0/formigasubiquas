@@ -9,4 +9,10 @@
     <string name="fields_act_title">Disciplinas</string>
     <string name="login_act_title">Login</string>
     <string name="error_connection">Você não tem conexão...</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_lastname">Sobrenome</string>
+    <string name="hint_registration_number">Número de matrícula</string>
+    <string name="hint_year">Ano</string>
+    <string name="hint_phone">Telefone</string>
+    <string name="register_button">Cadastrar</string>
 </resources>
