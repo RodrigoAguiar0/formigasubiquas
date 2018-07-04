@@ -4,13 +4,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class Preferences {
+
     private Context context;
     private SharedPreferences sharedPref;
     private String FILE_NAME = "eadep.preferences";
     private int MODE = 0;
     private SharedPreferences.Editor editor;
 
-    private final String KEY_EMAIL = "email";
+    private final String EMAIL_KEY = "email";
 
     public Preferences(Context context){
         this.context = context;
@@ -19,12 +20,12 @@ public class Preferences {
         editor = sharedPref.edit();
     }
 
-    public void insertEmail(String userIdentifier){
-        editor.putString(KEY_EMAIL, userIdentifier);
+    public void saveUserEmail(String email){
+        editor.putString(EMAIL_KEY, email);
         editor.commit();
     }
 
-    public String getEmail() {
-        return sharedPref.getString(KEY_EMAIL, null);
+    public String getEmail(){
+        return sharedPref.getString(EMAIL_KEY, null);
     }
 }

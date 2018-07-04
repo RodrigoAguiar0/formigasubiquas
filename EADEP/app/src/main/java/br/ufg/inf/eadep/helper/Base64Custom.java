@@ -4,11 +4,11 @@ import android.util.Base64;
 
 public class Base64Custom {
 
-    public static String codificarBase64(String texto){
-        return Base64.encodeToString(texto.getBytes(), Base64.DEFAULT).replaceAll("(\\n|\\r)", "");
+    public static String codeBase64(String text){
+        return Base64.encodeToString(text.getBytes(), Base64.DEFAULT).replaceAll("(\\n|\\r)", "");
     }
 
-    public static String decodificarBase64(String texto){
-        return new String(Base64.decode(texto, Base64.DEFAULT));
+    public static String decodeBase64(String text){
+        return new String(Base64.decode(text.getBytes(), Base64.DEFAULT));
     }
 }

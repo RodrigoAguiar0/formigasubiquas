@@ -25,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etEmail;
     private EditText etPassword;
     private Button btnLogin;
+    private Button btnSignUp;
     private FirebaseAuth auth;
     private Aluno aluno;
 
@@ -36,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         etEmail = (EditText) findViewById(R.id.email_edit);
         etPassword = (EditText) findViewById(R.id.pswd_edit);
         btnLogin = (Button) findViewById(R.id.login_btn);
+        btnSignUp = (Button) findViewById(R.id.signup_btn);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,15 +48,25 @@ public class LoginActivity extends AppCompatActivity {
                     aluno.setEmail(etEmail.getText().toString());
                     aluno.setSenha(etPassword.getText().toString());
 
-                    validarLogin();
+                    validateLogin();
                 }else{
                     Toast.makeText(LoginActivity.this, "Preencha os campos de e-mail e senha!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(LoginActivity.this, CadastroActivity.class);
+                startActivity(it);
+            }
+        });
+
+
     }
 
-    private void validarLogin(){
+    private void validateLogin(){
         auth = FirebaseConfig.getFirebaseAuth();
         auth.signInWithEmailAndPassword(aluno.getEmail(),
                 aluno.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -70,10 +82,12 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("email", etEmail.getText().toString());
                     editor.commit();
                 } else {
-                    Toast.makeText(LoginActivity.this, "Erro no login", Toast.LENGTH_SHORT);
+                    Toast.makeText(LoginActivity.this, "Usuário ou senha incorretos", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
     }
+
+
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".activities.CadastroActivity">
 
 
     <TextView
@@ -13,9 +13,8 @@
         android:layout_height="wrap_content"
         android:text="Cadastro de Alunos"
         android:textAlignment="center"
-        android:textSize="40dp"
         android:textColor="@color/colorPrimaryDark"
-        />
+        android:textSize="40dp" />
 
     <EditText
         android:id="@+id/name_edit_student"
@@ -32,7 +31,6 @@
         android:layout_marginHorizontal="16dp"
         android:hint="@string/hint_lastname"
         android:inputType="textPersonName" />
-
 
 
     <EditText
@@ -78,15 +76,14 @@
         android:inputType="textPassword" />
 
     <Button
+        android:id="@+id/insert_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="64dp"
         android:layout_marginTop="16dp"
-        android:text="@string/register_button"
-        android:textColor="@android:color/white"
         android:background="@color/colorPrimaryDark"
-        />
-
+        android:text="@string/register_button"
+        android:textColor="@android:color/white" />
 
 
 </LinearLayout>
