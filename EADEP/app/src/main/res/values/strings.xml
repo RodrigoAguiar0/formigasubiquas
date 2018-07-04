@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EADEP</string>
+    <string name="hint_email">Email ex.: email@example.com</string>
+    <string name="hint_password">Senha</string>
+    <string name="title_description">EADEP</string>
+    <string name="login_btn">Entrar</string>
+    <string name="forgot_pswd">Esqueceu a senha?</string>
+    <string name="signup_btn">Cadastrar</string>
+    <string name="fields_act_title">Disciplinas</string>
+    <string name="login_act_title">Login</string>
+    <string name="error_connection">Você não tem conexão...</string>
+</resources>
