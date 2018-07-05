@@ -47,6 +47,8 @@ public class CadastroActivity extends AppCompatActivity{
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         etNome = (EditText)findViewById(R.id.name_edit_student);
         etSobrenome = (EditText)findViewById(R.id.lastname_edit_student);
         etSenha = (EditText)findViewById(R.id.password_edit_student);
