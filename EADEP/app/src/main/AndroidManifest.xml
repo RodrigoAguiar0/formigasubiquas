@@ -12,12 +12,15 @@
         <activity android:name=".activities.DisciplinasActivity" android:label="@string/fields_act_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.LoginActivity" android:label="@string/login_act_title"></activity>
-        <activity android:name=".activities.CadastroActivity" android:label="@string/signup_act_title"></activity>
+        <activity android:name=".activities.CadastroActivity" android:label="@string/signup_act_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.DisciplinasActivity" />
+        </activity>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>

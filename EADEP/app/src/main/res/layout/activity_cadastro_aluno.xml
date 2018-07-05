@@ -6,16 +6,6 @@
     android:orientation="vertical"
     tools:context=".activities.CadastroActivity">
 
-
-    <TextView
-        android:id="@+id/cadastro_aluno"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cadastro de Alunos"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="40dp" />
-
     <EditText
         android:id="@+id/name_edit_student"
         android:layout_width="match_parent"
