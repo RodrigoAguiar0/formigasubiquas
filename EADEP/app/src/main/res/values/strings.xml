@@ -15,4 +15,5 @@
     <string name="hint_year">Ano</string>
     <string name="hint_phone">Telefone</string>
     <string name="register_button">Cadastrar</string>
+    <string name="signup_act_title">Cadastro</string>
 </resources>

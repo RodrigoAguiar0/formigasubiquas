@@ -1,5 +1,13 @@
 package br.ufg.inf.eadep.model;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import br.ufg.inf.eadep.DAO.FirebaseConfig;
+
 public class Aluno {
 
     private int id;
@@ -10,6 +18,26 @@ public class Aluno {
     private String telefone;
     private int ano;
     private int matricula;
+
+    public void addAluno(){
+        DatabaseReference firebaseRef = FirebaseConfig.getFirebase();
+        firebaseRef.child("aluno").child(getEmail()).setValue(this);
+    }
+
+    @Exclude
+    public Map<String, Object> toMap(){
+        HashMap<String, Object> alunoHashMap = new HashMap<>();
+
+        alunoHashMap.put("email", getEmail());
+        alunoHashMap.put("senha", getSenha());
+        alunoHashMap.put("nome", getNomeCompleto());
+        alunoHashMap.put("telefone", getTelefone());
+        alunoHashMap.put("matricula", getMatricula());
+        alunoHashMap.put("ano", getAno());
+        //alunoHashMap.put("pathFoto", getPathFoto());
+
+        return alunoHashMap;
+    }
 
     public int getId() {
         return id;

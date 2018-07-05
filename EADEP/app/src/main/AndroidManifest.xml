@@ -16,9 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity" android:label="@string/login_act_title">
-
-        </activity>
+        <activity android:name=".activities.LoginActivity" android:label="@string/login_act_title"></activity>
+        <activity android:name=".activities.CadastroActivity" android:label="@string/signup_act_title"></activity>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>

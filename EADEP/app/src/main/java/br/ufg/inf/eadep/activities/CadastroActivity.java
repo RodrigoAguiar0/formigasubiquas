@@ -41,11 +41,11 @@ public class CadastroActivity extends AppCompatActivity{
     private FirebaseAuth auth;
 
     private Aluno aluno;
-    private AlunoDAO alunoDAO = new AlunoDAO();
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cadastro_aluno);
 
         etNome = (EditText)findViewById(R.id.name_edit_student);
         etSobrenome = (EditText)findViewById(R.id.lastname_edit_student);
@@ -87,7 +87,7 @@ public class CadastroActivity extends AppCompatActivity{
                     String emailAluno = Base64Custom.codeBase64(aluno.getEmail());
                     FirebaseUser firebaseUser = task.getResult().getUser();
 
-                    alunoDAO.addAluno(aluno);
+                    aluno.addAluno();
 
                     Preferences preferences = new Preferences(CadastroActivity.this);
                     preferences.saveUserEmail(aluno.getEmail());
