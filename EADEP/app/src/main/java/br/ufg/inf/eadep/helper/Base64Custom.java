@@ -9,6 +9,6 @@ public class Base64Custom {
     }
 
     public static String decodeBase64(String text){
-        return new String(Base64.decode(text.getBytes(), Base64.DEFAULT));
+        return new String(Base64.decode(text, Base64.DEFAULT));
     }
 }

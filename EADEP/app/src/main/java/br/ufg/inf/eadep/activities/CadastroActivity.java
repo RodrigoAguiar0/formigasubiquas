@@ -47,7 +47,7 @@ public class CadastroActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_aluno);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         etNome = (EditText)findViewById(R.id.name_edit_student);
         etSobrenome = (EditText)findViewById(R.id.lastname_edit_student);
@@ -88,11 +88,11 @@ public class CadastroActivity extends AppCompatActivity{
 
                     String emailAluno = Base64Custom.codeBase64(aluno.getEmail());
                     FirebaseUser firebaseUser = task.getResult().getUser();
-
+                    aluno.setId(emailAluno);
                     aluno.addAluno();
 
                     Preferences preferences = new Preferences(CadastroActivity.this);
-                    preferences.saveUserEmail(aluno.getEmail());
+                    preferences.saveUserEmail(aluno.getId(), aluno.getEmail());
                     goToLoginAluno();
                 } else {
                     String exception;

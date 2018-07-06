@@ -10,7 +10,7 @@ import br.ufg.inf.eadep.DAO.FirebaseConfig;
 
 public class Aluno {
 
-    private int id;
+    private String id;
     private String pathFoto;
     private String nomeCompleto;
     private String email;
@@ -19,15 +19,16 @@ public class Aluno {
     private int ano;
     private int matricula;
 
-    public void addAluno(){
+    public void addAluno() {
         DatabaseReference firebaseRef = FirebaseConfig.getFirebase();
-        firebaseRef.child("aluno").child(getEmail()).setValue(this);
+        firebaseRef.child("aluno").child(String.valueOf(getId())).setValue(this);
     }
 
     @Exclude
-    public Map<String, Object> toMap(){
+    public Map<String, Object> toMap() {
         HashMap<String, Object> alunoHashMap = new HashMap<>();
 
+        alunoHashMap.put("id", getId());
         alunoHashMap.put("email", getEmail());
         alunoHashMap.put("senha", getSenha());
         alunoHashMap.put("nome", getNomeCompleto());
@@ -39,11 +40,11 @@ public class Aluno {
         return alunoHashMap;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
