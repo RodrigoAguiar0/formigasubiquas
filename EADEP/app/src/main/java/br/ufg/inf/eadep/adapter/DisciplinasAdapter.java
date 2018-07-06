@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -62,12 +63,12 @@ public class DisciplinasAdapter extends BaseAdapter{
 
         ImageView icon = gridView.findViewById(R.id.disciplina_icon);
         TextView title = gridView.findViewById(R.id.disciplina_title);
-        LinearLayout layout = gridView.findViewById(R.id.disciplina_layout);
+        Button disciplinaButton = gridView.findViewById(R.id.disciplina_button);
 
         final String subjectName = disciplinas.get(position).getNome();
 
         icon.setImageResource(R.drawable.ic_launcher_background);
-        layout.setOnClickListener(new View.OnClickListener() {
+        disciplinaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(ctx, AtividadesActivity.class);

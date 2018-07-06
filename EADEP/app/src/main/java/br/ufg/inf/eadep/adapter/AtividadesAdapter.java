@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -56,10 +57,11 @@ public class AtividadesAdapter extends BaseAdapter{
 
         TextView title = container.findViewById(R.id.activity_item_title);
         TextView description = container.findViewById(R.id.activity_item_description);
+        Button itemButton = container.findViewById(R.id.activity_item_button);
 
         final String activityTitle = atividades.get(position).getTitulo();
 
-        container.setOnClickListener(new View.OnClickListener() {
+        itemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(ctx, DetalhesAtividadeActivity.class);
