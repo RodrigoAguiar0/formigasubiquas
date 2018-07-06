@@ -15,7 +15,7 @@ import br.ufg.inf.eadep.DAO.FirebaseConfig;
 
 public class Disciplina {
 
-    private int id;
+    private String id;
     private String nome;
 
     // precisa mudar para uma entidade, quando o professor for uma entidade cadastrada
@@ -85,11 +85,11 @@ public class Disciplina {
     }
 */
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

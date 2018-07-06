@@ -37,25 +37,16 @@ public class AtividadesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_atividades);
 
-        Preferences sharedPref = new Preferences(AtividadesActivity.this);
 
-        System.out.println("EMAIL: " + sharedPref.getEmail());
+        ListView listView = findViewById(R.id.activities_lv);
 
-        String userEmail = sharedPref.getEmail();
-        if(userEmail.equals("")){
-            Intent it = new Intent(AtividadesActivity.this, LoginActivity.class);
-            startActivity(it);
+        listAtividades();
+        adapter = new AtividadesAdapter(AtividadesActivity.this, atividades);
+        listView.setAdapter(adapter);
 
-        } else {
-            ListView listView = findViewById(R.id.activities_lv);
-
-            listAtividades();
-            adapter = new AtividadesAdapter(AtividadesActivity.this, atividades);
-            listView.setAdapter(adapter);
-        }
     }
 
-    public void listAtividades(){
+    public void listAtividades() {
 
         sharedPrefs = new Preferences(AtividadesActivity.this);
         String subjectTitle = sharedPrefs.getSubject();
@@ -69,7 +60,7 @@ public class AtividadesActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 atividades.clear();
 
-                for(DataSnapshot dados : dataSnapshot.getChildren()){
+                for (DataSnapshot dados : dataSnapshot.getChildren()) {
                     Atividade atividadeNova = dados.getValue(Atividade.class);
 
                     atividades.add(atividadeNova);

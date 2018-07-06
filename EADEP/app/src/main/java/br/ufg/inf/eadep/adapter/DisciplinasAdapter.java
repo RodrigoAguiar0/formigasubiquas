@@ -52,7 +52,6 @@ public class DisciplinasAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View gridView = convertView;
-        System.out.println("EU QUERO UM SOUT AQUI");
         if(convertView == null){
             inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 

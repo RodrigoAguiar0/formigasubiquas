@@ -47,7 +47,6 @@ public class AtividadesAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View container = convertView;
-        System.out.println("EU QUERO UM SOUT AQUI");
         if(convertView == null){
             inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -72,7 +71,7 @@ public class AtividadesAdapter extends BaseAdapter{
         });
 
         title.setText(atividades.get(position).getTitulo());
-        description.setText(atividades.get(position).getDescricao());
+        description.setText(atividades.get(position).getDescricao().substring(0, 75) + "...");
         return container;
     }
 }

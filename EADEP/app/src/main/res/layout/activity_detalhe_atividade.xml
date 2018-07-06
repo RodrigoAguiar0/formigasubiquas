@@ -18,6 +18,15 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"/>
 
+    <Button
+        android:id="@+id/comment_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comentar"
+        android:textAllCaps="false"
+        android:background="@null"
+        android:textColor="@android:color/darker_gray"/>
+
     <ListView
         android:id="@+id/comentarios_lv"
         android:layout_width="match_parent"

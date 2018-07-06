@@ -51,7 +51,6 @@ public class DisciplinasActivity extends AppCompatActivity {
         }
     }
 
-
     public void listDisciplinas(){
 
         disciplinas = new ArrayList<Disciplina>();
