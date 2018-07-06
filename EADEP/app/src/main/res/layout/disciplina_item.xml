@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/disciplina_layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/disciplina_icon"
+    <Button
+        android:id="@+id/disciplina_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background" />
+        android:elevation="4dp">
 
-    <TextView
-        android:id="@+id/disciplina_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Geografia"
-        android:textAlignment="center"/>
+        <ImageView
+            android:id="@+id/disciplina_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background" />
 
+        <TextView
+            android:id="@+id/disciplina_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+    </Button>
 </LinearLayout>
+
