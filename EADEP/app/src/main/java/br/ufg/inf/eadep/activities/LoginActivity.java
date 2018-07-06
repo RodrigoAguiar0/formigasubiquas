@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import br.ufg.inf.eadep.DAO.FirebaseConfig;
 import br.ufg.inf.eadep.R;
+import br.ufg.inf.eadep.helper.Preferences;
 import br.ufg.inf.eadep.model.Aluno;
 
 public class LoginActivity extends AppCompatActivity {
@@ -28,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnSignUp;
     private FirebaseAuth auth;
     private Aluno aluno;
+
+    final Preferences sharedPref = new Preferences(LoginActivity.this);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,20 +70,17 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void validateLogin(){
+
         auth = FirebaseConfig.getFirebaseAuth();
         auth.signInWithEmailAndPassword(aluno.getEmail(),
                 aluno.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    sharedPref.saveUserEmail(etEmail.getText().toString());
+
                     Intent it = new Intent(LoginActivity.this, DisciplinasActivity.class);
                     startActivity(it);
-
-                    SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-
-                    editor.putString("email", etEmail.getText().toString());
-                    editor.commit();
                 } else {
                     Toast.makeText(LoginActivity.this, "Usuário ou senha incorretos", Toast.LENGTH_SHORT).show();
                 }

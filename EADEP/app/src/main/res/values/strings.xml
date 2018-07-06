@@ -17,4 +17,6 @@
     <string name="register_button">Cadastrar</string>
     <string name="signup_act_title">Cadastro</string>
     <string name="register_act_title">Cadastro de alunos</string>
+    <string name="atividades_act_title">Atividades</string>
+    <string name="detalhes_at_act_title">Detalhes</string>
 </resources>

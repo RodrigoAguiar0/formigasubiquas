@@ -10,6 +10,7 @@ public class FirebaseConfig {
 
     public static DatabaseReference getFirebase(){
         if(firebaseReference == null){
+            FirebaseDatabase.getInstance().setPersistenceEnabled(true);
             firebaseReference = FirebaseDatabase.getInstance().getReference();
 
         }

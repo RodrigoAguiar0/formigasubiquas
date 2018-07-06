@@ -1,6 +1,7 @@
 package br.ufg.inf.eadep.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
@@ -92,7 +93,7 @@ public class CadastroActivity extends AppCompatActivity{
                     aluno.addAluno();
 
                     Preferences preferences = new Preferences(CadastroActivity.this);
-                    preferences.saveUserEmail(aluno.getId(), aluno.getEmail());
+                    preferences.saveUserEmail(aluno.getEmail());
                     goToLoginAluno();
                 } else {
                     String exception;
