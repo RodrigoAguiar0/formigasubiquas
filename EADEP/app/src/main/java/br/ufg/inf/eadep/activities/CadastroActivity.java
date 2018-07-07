@@ -1,13 +1,9 @@
 package br.ufg.inf.eadep.activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +18,6 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
-import br.ufg.inf.eadep.DAO.AlunoDAO;
 import br.ufg.inf.eadep.DAO.FirebaseConfig;
 import br.ufg.inf.eadep.R;
 import br.ufg.inf.eadep.helper.Base64Custom;

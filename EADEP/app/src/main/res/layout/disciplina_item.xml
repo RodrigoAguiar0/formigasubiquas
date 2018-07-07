@@ -6,27 +6,20 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/disciplina_button"
+    <ImageView
+        android:id="@+id/disciplina_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="4dp">
+        android:src="@drawable/ic_launcher_background" />
 
-        <ImageView
-            android:id="@+id/disciplina_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_background" />
-
-        <TextView
-            android:id="@+id/disciplina_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@android:color/white"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="@android:color/black" />
-    </Button>
+    <TextView
+        android:id="@+id/disciplina_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
 </LinearLayout>
 

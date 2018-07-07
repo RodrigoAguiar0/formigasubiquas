@@ -46,7 +46,7 @@ public class ComentariosAdapter extends BaseAdapter {
         if(convertView == null){
             inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            container = inflater.inflate(R.layout.atividade_item, null);
+            container = inflater.inflate(R.layout.comentario_item, null);
         }
 
         TextView content = container.findViewById(R.id.comment_content);

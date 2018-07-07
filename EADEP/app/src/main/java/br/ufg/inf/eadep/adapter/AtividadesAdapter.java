@@ -56,11 +56,11 @@ public class AtividadesAdapter extends BaseAdapter{
 
         TextView title = container.findViewById(R.id.activity_item_title);
         TextView description = container.findViewById(R.id.activity_item_description);
-        Button itemButton = container.findViewById(R.id.activity_item_button);
 
         final String activityTitle = atividades.get(position).getTitulo();
 
-        itemButton.setOnClickListener(new View.OnClickListener() {
+        System.out.println("A ATIVIDADE È A SEGUINTE: "+activityTitle);
+        container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(ctx, DetalhesAtividadeActivity.class);
@@ -68,6 +68,7 @@ public class AtividadesAdapter extends BaseAdapter{
                 Preferences sharedPref = new Preferences(ctx);
                 sharedPref.saveActivityTitle(activityTitle);
 
+                System.out.println("A ATIVIDADE SALVA È A SEGUINTE: " + activityTitle);
                 ctx.startActivity(it);
             }
         });
