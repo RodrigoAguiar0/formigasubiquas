@@ -4,6 +4,7 @@
     android:id="@+id/disciplina_layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:elevation="8dp"
     android:orientation="vertical">
 
     <ImageView

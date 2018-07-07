@@ -21,8 +21,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.DisciplinasActivity" />
         </activity>
-        <activity android:name=".activities.AtividadesActivity" android:label="@string/atividades_act_title"></activity>
-        <activity android:name=".activities.DetalhesAtividadeActivity" android:label="@string/detalhes_at_act_title"></activity>
+        <activity android:name=".activities.AtividadesActivity" android:label="@string/atividades_act_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.DisciplinasActivity" />
+        </activity>
+        <activity android:name=".activities.DetalhesAtividadeActivity" android:label="@string/detalhes_at_act_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AtividadesActivity" />
+        </activity>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>

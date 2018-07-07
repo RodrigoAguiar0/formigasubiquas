@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
+    android:elevation="8dp"
     android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/baseline_chevron_right_black_24" />
 
     <TextView
         android:id="@+id/activity_item_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="LOOOUCO MEMO"
+        android:textColor="@android:color/black"
         android:textSize="32sp" />
 
     <TextView
         android:id="@+id/activity_item_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/activity_item_title"
+        android:text="LOOOUCO"
+        android:textColor="@android:color/black"
         android:textSize="16sp" />
-</LinearLayout>
+</RelativeLayout>
