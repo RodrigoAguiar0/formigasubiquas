@@ -19,7 +19,7 @@
         <activity android:name=".activities.CadastroActivity" android:label="@string/signup_act_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.DisciplinasActivity" />
+                android:value=".activities.LoginActivity" />
         </activity>
         <activity android:name=".activities.AtividadesActivity" android:label="@string/atividades_act_title">
             <meta-data
@@ -31,6 +31,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.AtividadesActivity" />
         </activity>
+        <activity android:name=".activities.EdicaoActivity" android:label="Edição">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.DisciplinasActivity" />
+        </activity>
+<<<<<<< HEAD
+        <activity android:name=".activities.AtividadesActivity" android:label="@string/atividades_act_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.DisciplinasActivity" />
+        </activity>
+        <activity android:name=".activities.DetalhesAtividadeActivity" android:label="@string/detalhes_at_act_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AtividadesActivity" />
+        </activity>
+=======
+>>>>>>> 00806d3abab234f15e06472aec054b9c8db49fb7
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>

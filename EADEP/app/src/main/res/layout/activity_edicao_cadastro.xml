@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.CadastroActivity">
+    tools:context=".activities.EdicaoActivity">
 
     <EditText
-        android:id="@+id/name_edit_student"
+        android:id="@+id/name_redissue_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -15,7 +15,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/lastname_edit_student"
+        android:id="@+id/lastname_reissue_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -24,7 +24,7 @@
 
 
     <EditText
-        android:id="@+id/registration_number_edit_student"
+        android:id="@+id/registration_number_reissue_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -32,7 +32,7 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/year_edit_student"
+        android:id="@+id/year_reissue_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -41,7 +41,7 @@
 
 
     <EditText
-        android:id="@+id/phone_edit_student"
+        android:id="@+id/phone_reissue_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -49,7 +49,7 @@
         android:inputType="number" />
 
     <EditText
-        android:id="@+id/email_edit_student"
+        android:id="@+id/email_reissue_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -58,7 +58,7 @@
 
 
     <EditText
-        android:id="@+id/password_edit_student"
+        android:id="@+id/password_reissue_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -73,8 +73,7 @@
         android:layout_marginTop="16dp"
         android:background="@color/colorPrimaryDark"
         android:elevation="4dp"
-        android:text="@string/register_button"
-        android:elevation="4dp"
+        android:text="@string/reissue_button"
         android:textColor="@android:color/white" />
 
 

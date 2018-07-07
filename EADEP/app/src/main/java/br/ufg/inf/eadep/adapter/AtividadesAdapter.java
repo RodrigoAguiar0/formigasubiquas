@@ -59,7 +59,10 @@ public class AtividadesAdapter extends BaseAdapter{
 
         final String activityTitle = atividades.get(position).getTitulo();
 
+<<<<<<< HEAD
         System.out.println("A ATIVIDADE È A SEGUINTE: "+activityTitle);
+=======
+>>>>>>> 00806d3abab234f15e06472aec054b9c8db49fb7
         container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

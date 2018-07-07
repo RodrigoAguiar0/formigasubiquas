@@ -11,6 +11,7 @@
         android:id="@+id/disciplina_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:src="@drawable/ic_launcher_background" />
 
     <TextView
@@ -22,5 +23,14 @@
         android:text=""
         android:textAlignment="center"
         android:textColor="@android:color/black" />
+=======
+        android:background="@drawable/ic_launcher_background"
+        android:elevation="4dp"
+        android:text="Louco"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black">
+    </Button>
+>>>>>>> 00806d3abab234f15e06472aec054b9c8db49fb7
 </LinearLayout>
 
