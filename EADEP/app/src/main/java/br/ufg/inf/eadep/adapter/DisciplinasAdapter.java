@@ -60,7 +60,6 @@ public class DisciplinasAdapter extends BaseAdapter{
             gridView = inflater.inflate(R.layout.disciplina_item, null);
         }
 
-<<<<<<< HEAD
         ImageView icon = gridView.findViewById(R.id.disciplina_icon);
         TextView title = gridView.findViewById(R.id.disciplina_title);
         LinearLayout layout = gridView.findViewById(R.id.disciplina_layout);
@@ -70,13 +69,6 @@ public class DisciplinasAdapter extends BaseAdapter{
 
         icon.setImageResource(R.drawable.ic_launcher_background);
         layout.setOnClickListener(new View.OnClickListener() {
-=======
-        Button disciplinaButton = gridView.findViewById(R.id.disciplina_button);
-
-        final String subjectName = disciplinas.get(position).getNome();
-
-        disciplinaButton.setOnClickListener(new View.OnClickListener() {
->>>>>>> 00806d3abab234f15e06472aec054b9c8db49fb7
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(ctx, AtividadesActivity.class);
@@ -87,7 +79,7 @@ public class DisciplinasAdapter extends BaseAdapter{
             }
         });
 
-        disciplinaButton.setText(disciplinas.get(position).getNome());
+        title.setText(disciplinas.get(position).getNome());
         return gridView;
     }
 }
