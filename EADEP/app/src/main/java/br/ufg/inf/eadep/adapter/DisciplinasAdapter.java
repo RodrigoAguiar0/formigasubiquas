@@ -60,13 +60,10 @@ public class DisciplinasAdapter extends BaseAdapter{
             gridView = inflater.inflate(R.layout.disciplina_item, null);
         }
 
-        ImageView icon = gridView.findViewById(R.id.disciplina_icon);
-        TextView title = gridView.findViewById(R.id.disciplina_title);
         Button disciplinaButton = gridView.findViewById(R.id.disciplina_button);
 
         final String subjectName = disciplinas.get(position).getNome();
 
-        icon.setImageResource(R.drawable.ic_launcher_background);
         disciplinaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +75,7 @@ public class DisciplinasAdapter extends BaseAdapter{
             }
         });
 
-        title.setText(disciplinas.get(position).getNome());
+        disciplinaButton.setText(disciplinas.get(position).getNome());
         return gridView;
     }
 }

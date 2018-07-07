@@ -60,7 +60,7 @@ public class AtividadesAdapter extends BaseAdapter{
 
         final String activityTitle = atividades.get(position).getTitulo();
 
-        itemButton.setOnClickListener(new View.OnClickListener() {
+        container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(ctx, DetalhesAtividadeActivity.class);
