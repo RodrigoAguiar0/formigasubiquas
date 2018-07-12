@@ -32,7 +32,7 @@ public class Aluno {
         alunoHashMap.put("id", getId());
         alunoHashMap.put("email", getEmail());
         alunoHashMap.put("senha", getSenha());
-        alunoHashMap.put("nome", getNomeCompleto());
+        alunoHashMap.put("nomeCompleto", getNomeCompleto());
         alunoHashMap.put("telefone", getTelefone());
         alunoHashMap.put("matricula", getMatricula());
         alunoHashMap.put("ano", getAno());
