@@ -10,22 +10,30 @@
         android:id="@+id/activity_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="32sp"/>
+        android:padding="8dp"
+        android:textSize="32sp"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/activity_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"/>
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:id="@+id/comment_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Comentar"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/activity_detailed_btn"
+        android:textAlignment="center"
         android:textAllCaps="false"
-        android:background="@null"
-        android:textColor="@android:color/darker_gray"/>
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:elevation="4dp"/>
 
     <ListView
         android:id="@+id/comentarios_lv"
