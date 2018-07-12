@@ -3,13 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
+    android:orientation="vertical"
     tools:context=".activities.DisciplinasActivity">
+
+    <ImageButton
+        android:id="@+id/profile_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_person_black_24dp" />
+
 
     <GridView
         android:id="@+id/fields_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="8dp"
         android:numColumns="3"
         android:verticalSpacing="8dp">
 

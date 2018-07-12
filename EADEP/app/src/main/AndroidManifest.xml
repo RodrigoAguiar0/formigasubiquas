@@ -32,6 +32,12 @@
                 android:value=".activities.AtividadesActivity" />
         </activity>
 
+        <activity android:name=".activities.EdicaoActivity" android:label="@string/edicao_at_act_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.DisciplinasActivity" />
+        </activity>
+
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>

@@ -3,7 +3,10 @@ package br.ufg.inf.eadep.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageButton;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +26,7 @@ public class DisciplinasActivity extends AppCompatActivity {
 
     private DisciplinasAdapter adapter;
     private GridView gridDisciplinas;
+
     private List<Disciplina> disciplinas;
     private int[] icons = new int[]{R.drawable.ic_launcher_background};
 
@@ -48,7 +52,19 @@ public class DisciplinasActivity extends AppCompatActivity {
             listDisciplinas();
             adapter = new DisciplinasAdapter(DisciplinasActivity.this, icons, disciplinas);
             grid.setAdapter(adapter);
+
+
         }
+
+        ImageButton profileBtn = findViewById(R.id.profile_btn);
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(DisciplinasActivity.this , EdicaoActivity.class);
+                startActivity(it);
+            }
+        });
     }
 
     public void listDisciplinas(){
@@ -76,6 +92,8 @@ public class DisciplinasActivity extends AppCompatActivity {
 
             }
         };
+
+        firebase.addValueEventListener(valueEventListenerDisciplinas);
     }
 
     @Override

@@ -6,6 +6,13 @@
     android:orientation="vertical"
     tools:context=".activities.DetalhesAtividadeActivity">
 
+    <ImageButton
+        android:id="@+id/profile_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_person_black_24dp" />
+
     <TextView
         android:id="@+id/activity_title"
         android:layout_width="match_parent"

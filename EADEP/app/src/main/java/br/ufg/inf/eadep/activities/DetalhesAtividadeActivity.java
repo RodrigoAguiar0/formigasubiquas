@@ -1,9 +1,11 @@
 package br.ufg.inf.eadep.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -57,6 +59,16 @@ public class DetalhesAtividadeActivity extends AppCompatActivity{
 
             }
         });*/
+
+        ImageButton profileBtn = findViewById(R.id.profile_btn);
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(DetalhesAtividadeActivity.this , EdicaoActivity.class);
+                startActivity(it);
+            }
+        });
     }
 
     public void getAtividade(){
