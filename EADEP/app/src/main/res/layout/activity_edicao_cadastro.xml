@@ -7,7 +7,7 @@
     tools:context=".activities.EdicaoActivity">
 
     <EditText
-        android:id="@+id/name_redissue_student"
+        android:id="@+id/name_reissue_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -66,15 +66,25 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/insert_btn"
+        android:id="@+id/reissue_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="64dp"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:background="@color/colorPrimaryDark"
         android:elevation="4dp"
         android:text="@string/reissue_button"
         android:textColor="@android:color/white" />
 
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorLogout"
+        android:elevation="4dp"
+        android:text="@string/logout_text"
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>

@@ -45,14 +45,14 @@ public class CadastroActivity extends AppCompatActivity{
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        etNome = (EditText)findViewById(R.id.name_edit_student);
-        etSobrenome = (EditText)findViewById(R.id.lastname_edit_student);
-        etSenha = (EditText)findViewById(R.id.password_edit_student);
-        etEmail = (EditText)findViewById(R.id.email_edit_student);
-        etTelefone = (EditText)findViewById(R.id.phone_edit_student);
-        etAno = (EditText)findViewById(R.id.year_edit_student);
-        etMatricula = (EditText)findViewById(R.id.registration_number_edit_student);
-        insertBtn = (Button)findViewById(R.id.insert_btn);
+        etNome = findViewById(R.id.name_edit_student);
+        etSobrenome = findViewById(R.id.lastname_edit_student);
+        etSenha = findViewById(R.id.password_edit_student);
+        etEmail = findViewById(R.id.email_edit_student);
+        etTelefone = findViewById(R.id.phone_edit_student);
+        etAno = findViewById(R.id.year_edit_student);
+        etMatricula = findViewById(R.id.registration_number_edit_student);
+        insertBtn = findViewById(R.id.insert_btn);
 
         insertBtn.setOnClickListener(new View.OnClickListener() {
             @Override
