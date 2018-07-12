@@ -59,7 +59,6 @@ public class AtividadesAdapter extends BaseAdapter{
 
         final String activityTitle = atividades.get(position).getTitulo();
 
-        System.out.println("A ATIVIDADE È A SEGUINTE: "+activityTitle);
         container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +67,6 @@ public class AtividadesAdapter extends BaseAdapter{
                 Preferences sharedPref = new Preferences(ctx);
                 sharedPref.saveActivityTitle(activityTitle);
 
-                System.out.println("A ATIVIDADE SALVA È A SEGUINTE: " + activityTitle);
                 ctx.startActivity(it);
             }
         });

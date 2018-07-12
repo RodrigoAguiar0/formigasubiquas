@@ -19,7 +19,7 @@ public class ComentariosAdapter extends BaseAdapter {
     private Context ctx;
     private LayoutInflater inflater;
 
-    public ComentariosAdapter(Context ctx, List<Comentario> comentarios){
+    public ComentariosAdapter(Context ctx, List<Comentario> comentarios) {
         this.ctx = ctx;
         this.comentarios = comentarios;
     }
@@ -41,20 +41,25 @@ public class ComentariosAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
         View container = convertView;
-        if(convertView == null){
+
+
+        if (convertView == null) {
             inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             container = inflater.inflate(R.layout.comentario_item, null);
         }
 
-        TextView content = container.findViewById(R.id.comment_content);
-        TextView author = container.findViewById(R.id.comment_author);
+        if (comentarios.get(position) != null) {
+            TextView content = container.findViewById(R.id.comment_content);
+            TextView author = container.findViewById(R.id.comment_author);
 
-        content.setText(comentarios.get(position).getConteudo());
-        author.setText(comentarios.get(position).getAutor());
 
+            content.setText(comentarios.get(position).getConteudo());
+            author.setText(comentarios.get(position).getAutor());
+
+
+        }
         return container;
     }
 }

@@ -29,13 +29,11 @@ public class DetalhesAtividadeActivity extends AppCompatActivity{
     private List<Comentario> comments;
     private List<Atividade> atividades;
     private DatabaseReference firebase;
-    private ValueEventListener valueEventListenerComentarios;
     private ValueEventListener valueEventListenerAtividades;
     private Preferences sharedPrefs;
     private ComentariosAdapter adapter;
 
     private ListView commentsLV;
-    private Button commentBtn;
     private TextView activityTitle;
     private TextView activityDescription;
 
@@ -45,13 +43,12 @@ public class DetalhesAtividadeActivity extends AppCompatActivity{
         setContentView(R.layout.activity_detalhe_atividade);
 
         commentsLV = findViewById(R.id.comentarios_lv);
-        commentBtn = findViewById(R.id.comment_btn);
         activityTitle = findViewById(R.id.activity_title);
         activityDescription = findViewById(R.id.activity_description);
 
         getAtividade();
-        //adapter = new ComentariosAdapter(DetalhesAtividadeActivity.this, comments);
-        //commentsLV.setAdapter(adapter);
+
+
 /*
         commentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +90,10 @@ public class DetalhesAtividadeActivity extends AppCompatActivity{
                     if(atividadeNova.getTitulo().equals(sharedPrefs.getActivityTitle())){
                         activityTitle.setText(atividadeNova.getTitulo());
                         activityDescription.setText(atividadeNova.getDescricao());
+                        comments = atividadeNova.getComentarios();
+                        comments.remove(0);
+                        adapter = new ComentariosAdapter(DetalhesAtividadeActivity.this, comments);
+                        commentsLV.setAdapter(adapter);
                     }
                     atividades.add(atividadeNova);
                 }
@@ -106,49 +107,15 @@ public class DetalhesAtividadeActivity extends AppCompatActivity{
         };
     }
 
-    public void listComments(){
-
-        sharedPrefs = new Preferences(DetalhesAtividadeActivity.this);
-        String subjectTitle = sharedPrefs.getSubject();
-
-        comments = new ArrayList<>();
-        firebase = FirebaseConfig.getFirebase().child("disciplina").child(subjectTitle)
-                .child("tarefas").child(sharedPrefs.getActivityTitle())
-                .child("zcomentarios");
-
-        valueEventListenerComentarios = new ValueEventListener() {
-
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                comments.clear();
-
-                Comentario comentario = null;
-
-                for(DataSnapshot dados : dataSnapshot.getChildren()){
-                    comentario = dados.getValue(Comentario.class);
-
-                    comments.add(comentario);
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        };
-    }
-
     @Override
     protected void onStop() {
         super.onStop();
         firebase.removeEventListener(valueEventListenerAtividades);
-        //firebase.removeEventListener(valueEventListenerComentarios);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         firebase.addValueEventListener(valueEventListenerAtividades);
-        //firebase.addValueEventListener(valueEventListenerComentarios);
     }
 }
