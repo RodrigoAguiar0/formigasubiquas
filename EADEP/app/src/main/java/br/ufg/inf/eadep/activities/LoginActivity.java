@@ -30,13 +30,14 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private Aluno aluno;
 
-    final Preferences sharedPref = new Preferences(LoginActivity.this);
+    private Preferences sharedPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        sharedPref = new Preferences(LoginActivity.this);
         etEmail = (EditText) findViewById(R.id.email_edit);
         etPassword = (EditText) findViewById(R.id.pswd_edit);
         btnLogin = (Button) findViewById(R.id.login_btn);

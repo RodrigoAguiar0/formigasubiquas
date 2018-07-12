@@ -81,12 +81,18 @@ public class DisciplinasActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        firebase.removeEventListener(valueEventListenerDisciplinas);
+        if(firebase != null){
+
+            firebase.removeEventListener(valueEventListenerDisciplinas);
+        }
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        firebase.addValueEventListener(valueEventListenerDisciplinas);
+        if(firebase != null){
+
+            firebase.addValueEventListener(valueEventListenerDisciplinas);
+        }
     }
 }

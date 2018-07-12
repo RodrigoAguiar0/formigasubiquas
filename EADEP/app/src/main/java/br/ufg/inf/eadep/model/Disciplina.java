@@ -25,66 +25,6 @@ public class Disciplina {
     private DatabaseReference firebase;
     private ValueEventListener valueEventListenerDisciplinas;
 
-    // Funções de adição (essas duas abaixo), colocar no onclick do botão de adição
-   /*
-    public void onClick() {
-        Disciplina disciplina = new Disciplina();
-        disciplina.setNome(<editText>etNome.getText);
-        disciplina.setProfessor(<editText>etProfessor.getText);
-
-        addDisciplina(disciplina);
-    }
-
-    public boolean addDisciplina(Disciplina disciplina) {
-        try {
-            firebase = FirebaseConfig.getFirebase().child(<nome da 'tabela'>"disciplina");
-            firebase.child(disciplina.getNome()).setValue(this);// essa linha faz realmente o cadastro
-
-            Toast.makeText(<Nome da classe da activity .this>Contexto.this, "Disciplina cadastrada com sucesso", Toast.LENGTH_LONG).show();
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-    // Funções de listagem, colocar no onclick do botão de listagem(?)
-    public void listDisciplinas(){
-
-        final List<Disciplina> disciplinas = new ArrayList<>();
-        firebase = FirebaseConfig.getFirebase().child("disciplina");
-
-        valueEventListenerDisciplinas = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                disciplinas.clear();
-
-                for(DataSnapshot dados : dataSnapshot.getChildren()){
-                    Disciplina disciplinaNova = dados.getValue(Disciplina.class);
-
-                    disciplinas.add(disciplinaNova);
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        };
-    }
-
-    onStop<deve ser override>{
-        super.onStop();
-        firebase.removeEventListener(valueEventListenerDisciplinas);
-    }
-
-    onStart<deve ser override> {
-        super.onStart();
-
-        firebase.addValueEventListener(valueEventListenerDisciplinas);
-    }
-*/
-
     public String getId() {
         return id;
     }
