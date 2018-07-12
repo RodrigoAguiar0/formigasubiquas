@@ -20,6 +20,7 @@
     <string name="atividades_act_title">Atividades</string>
     <string name="detalhes_at_act_title">Detalhes</string>
     <string name="reissue_button">Salvar Alterações</string>
+    <string name="edicao_at_act_title">Perfil</string>
     <string name="activity_detailed_btn">Comentar</string>
     <string name="logout_text">Desconectar</string>
 </resources>

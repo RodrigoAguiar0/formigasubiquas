@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -28,6 +31,7 @@ public class AtividadesActivity extends AppCompatActivity {
     private Preferences sharedPrefs;
     private AtividadesAdapter adapter;
     private List<Atividade> atividades;
+    private Toolbar toolbar;
 
     private DatabaseReference firebase;
     private ValueEventListener valueEventListenerAtividades;
@@ -37,12 +41,22 @@ public class AtividadesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_atividades);
 
-
         ListView listView = findViewById(R.id.activities_lv);
 
         listAtividades();
         adapter = new AtividadesAdapter(AtividadesActivity.this, atividades);
         listView.setAdapter(adapter);
+
+        ImageButton profileBtn = findViewById(R.id.profile_btn);
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(AtividadesActivity.this , EdicaoActivity.class);
+                startActivity(it);
+            }
+        });
+
 
     }
 

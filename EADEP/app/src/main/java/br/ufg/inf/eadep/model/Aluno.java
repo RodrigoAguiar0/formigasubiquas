@@ -16,6 +16,7 @@ public class Aluno {
     private String email;
     private String senha;
     private String telefone;
+    private String disciplinas;
     private int ano;
     private int matricula;
 
